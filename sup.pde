@@ -1,9 +1,16 @@
 
 int dc;
 
+PImages[] imgs;
 
 void setup() {
   size(800, 1280);
+
+  imgs = {loadImage("fluffy.jpg"), loadImage("b1.jpg"), loadImage("b2.jpg"), 
+          loadImage("pillowsnuggle.gif"), loadImage("lolpear.png"), loadImage("sfid.jpg"), loadImage("b3.jpg"),
+          loadImage("b4.jpg"), loadImage("b5.jpg"), loadImage("b6.jpg"), loadImage("b7.jpg"), loadImage("b8.jpg"), loadImage("h1.jpg")];
+  
+  
 
   frameRate(2);
 }
@@ -20,32 +27,13 @@ ellipse(random(width), random(height), 40, 40);
 ellipse(random(width), random(height), 50, 50);
 
 int i = (int)random(14);
-if(i==0)
-  image(loadImage("fluffy.jpg"), width/2+random(-600, 100), height/2+random(-400, 10));
-if(i==1)
-  image(loadImage("b1.jpg"), width/2+random(-600, 100), height/2+random(-400, 10));
-if(i==2)
-  image(loadImage("b2.jpg"), width/2+random(-600, 100), height/2+random(-400, 10));
-if(i==3)
-  image(loadImage("pillowsnuggle.gif"), width/2+random(-600, 100), height/2+random(-400, 10));
-if(i==4)
-  image(loadImage("lolpear.png"), width/2+random(-600, 100), height/2+random(-400, 10));
-if(i==5)
-  image(loadImage("sfid.jpg"), width/2+random(-600, 100), height/2+random(-400, 10));
-if(i==7)
-  image(loadImage("b3.jpg"), width/2+random(-600, 100), height/2+random(-400, 10));
-if(i==8)
-  image(loadImage("b4.jpg"), width/2+random(-600, 100), height/2+random(-400, 10));
-if(i==9)
-  image(loadImage("b5.jpg"), width/2+random(-600, 100), height/2+random(-400, 10));
-if(i==10)
-  image(loadImage("b6.jpg"), width/2+random(-600, 100), height/2+random(-400, 10));
-if(i==11)
-  image(loadImage("b7.jpg"), width/2+random(-600, 100), height/2+random(-400, 10));
-if(i==12)
-  image(loadImage("b8.jpg"), width/2+random(-600, 100), height/2+random(-400, 10));
-if(i==13)
-  image(loadImage("h1.jpg"), width/2+random(-600, 100), height/2+random(-400, 10));
+
+for(int x = 0; x<imgs.length; x++){
+  if(x==i)
+    image(imgs[x], width/2+random(-600, 100), height/2+random(-400, 10));
+}
+
+
 dc++;  
 }
 
