@@ -3,7 +3,7 @@ int dc;
 
 
 void setup() {
-  size(displayWidth, displayHeight);
+  size(800, 1280);
 
   frameRate(2);
 }
