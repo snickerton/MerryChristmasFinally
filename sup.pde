@@ -4,7 +4,7 @@ int dc;
 PImages[] imgs;
 
 void setup() {
-  size(800, 1280);
+  size(1280, 800);
 
   imgs = {loadImage("fluffy.jpg"), loadImage("b1.jpg"), loadImage("b2.jpg"), 
           loadImage("pillowsnuggle.gif"), loadImage("lolpear.png"), loadImage("sfid.jpg"), loadImage("b3.jpg"),
